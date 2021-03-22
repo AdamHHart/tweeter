@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
+    <!-- imported fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -20,10 +27,21 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
+      <div class="barContainer">
+        <div class="innerContainer">
+          <span id="logo">tweeter</span>
+          <span id="newTweet">Write a new tweet!</span>
+        </div>
+      </div>
     </nav>
+    <header class="header">
+      <h1>(HEADER) Because everyone should know what you're thinking...</h1>
+    </header>
+    
 
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+      <p>(MAIN)This is the main container of TWEETER.</p>
+    </main>
   </body>
 </html>
