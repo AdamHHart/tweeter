@@ -4,7 +4,10 @@
  * Do not modify these two selectors, please
  */
 
- 
+* {
+  border: solid black 1px;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -13,15 +16,60 @@ html {
   font-family: sans-serif;
 }
 
+main {
+  width: 90%;
+}
+
+.textContent {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.belowTweet {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#tweetInput {
+  background-color: #d8b680;
+  border-bottom: black solid 5px;
+  width: 90%;
+  font-size: 20px;
+  border: none;
+}
+#tweetButton {
+  background-color: #4056A1;
+  width: 25%;
+  display: flex;
+  font-family: 'Bungee', cursive;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.counter {
+  display: flex;
+  align-self: flex-end;
+}
+
+
+
 /*
  * Global layout stuff
  */
 
 body {
   color: #545149;
-  background-color: #f4f1ec;
+  background-color: #d8b680;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
 }
 
 #logo {

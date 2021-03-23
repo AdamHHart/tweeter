@@ -20,21 +20,16 @@ html {
  * Global layout stuff
  */
 
-body {
+.body {
   color: #545149;
-  background-color: #f4f1ec;
+  background-color: #e6cca3;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-.header {
-  font-family: 'Source Sans Pro', sans-serif;
-  background-color: lightsalmon;
-}
 
 .container {
   font-family: 'Source Sans Pro', sans-serif;
-  background-color: lightgreen;
 }
 
 #logo {
@@ -53,12 +48,13 @@ body {
   /* justify-content: flex-end;
   align-content: space-around; */
 }
+
 nav {
   width: 100%; 
   height: 70px;
   background-color: #4056A1;
-
 }
+
 .barContainer {
   padding-top: 20px;
   /* display: flex;
@@ -66,10 +62,31 @@ nav {
   justify-content: space-between;
   align-content: center; */
 }
+
 .innerContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-content: center;
+}
+
+.header {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: lightsalmon;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.userName {
+  display: flex;
+  justify-content: center;
   align-content: center;
 }
 

@@ -13,6 +13,7 @@
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     
@@ -24,7 +25,7 @@
     <script type="text/javascript" src="/scripts/client.js"></script>
   </head>
 
-  <body>
+  <body class="body">
     <!-- Top nav bar (fixed) -->
     <nav>
       <div class="barContainer">
@@ -35,13 +36,34 @@
       </div>
     </nav>
     <header class="header">
-      <h1>(HEADER) Because everyone should know what you're thinking...</h1>
+        <div class="avatar">
+            <img src="/images/profile-hex.png"> 
+        </div>
+        <br>
+        <div class="userName">
+            <h2>Your Name</h2>
+        </div>
     </header>
-    
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <p>(MAIN)This is the main container of TWEETER.</p>
+      <section class="new-tweet">
+        <h3>Compose Tweet</h3>
+        <form Content-Type="application/x-www-form-urlencoded" action="/tweets/" method="POST">
+          <!-- <label for="tweetInput">What are you humming about?</label>
+          <textarea name="text" id="tweetInput"></textarea> -->
+          <input type="text" name="tweetInput" id="tweetInput" value="What are you humming and hawwing about?">
+          <div class="belowTweet">
+            <button type="submit" id="tweetButton">TWEET!</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+      <!-- <input type="text" name="tweetInput" id="tweetInput" value="What are you humming and hawwing about?">
+      <input type="submit" name="tweetButton" id="tweetButton" value="TWEET!">
+      <h3>Name Header</h3>
+      <p class="textContent">(MAIN)This is the main container of TWEETER.</p>
+      <h6>Date Posted ___</h6> -->
     </main>
   </body>
 </html>

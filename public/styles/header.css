@@ -1,0 +1,23 @@
+.header {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #db0700;
+  background-image: url("https://www.transparenttextures.com/patterns/light-honeycomb-dark.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  height: 400px;
+  width: 100%;
+
+}
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.userName {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
