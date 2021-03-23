@@ -9,12 +9,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
     <!-- imported fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     
 
@@ -22,6 +24,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
     <script type="text/javascript" src="/scripts/client.js"></script>
   </head>
 
@@ -52,18 +55,17 @@
         <form Content-Type="application/x-www-form-urlencoded" action="/tweets/" method="POST">
           <!-- <label for="tweetInput">What are you humming about?</label>
           <textarea name="text" id="tweetInput"></textarea> -->
-          <input type="text" name="tweetInput" id="tweetInput" value="What are you humming and hawwing about?">
+          <input type="text" name="tweetInput" id="tweetInput" value="Broadcast your stupid thoughts.." >
           <div class="belowTweet">
             <button type="submit" id="tweetButton">TWEET!</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+            <div class="d-flex">
+              <p class="errorMsg">Character Limit Exceeded!</p>
+              <output name="counter" class="counter" for="tweet-text"><span id="countNumber">0</span>/140</output>
+              <br clear="both">
+            </div>
           </div>
         </form>
       </section>
-      <!-- <input type="text" name="tweetInput" id="tweetInput" value="What are you humming and hawwing about?">
-      <input type="submit" name="tweetButton" id="tweetButton" value="TWEET!">
-      <h3>Name Header</h3>
-      <p class="textContent">(MAIN)This is the main container of TWEETER.</p>
-      <h6>Date Posted ___</h6> -->
     </main>
   </body>
 </html>

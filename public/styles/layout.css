@@ -20,30 +20,6 @@ main {
   width: 90%;
 }
 
-.textContent {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.belowTweet {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-#tweetInput {
-  background-color: #d8b680;
-  border-bottom: black solid 5px;
-  width: 90%;
-  font-size: 20px;
-  border: none;
-}
-#tweetButton {
-  background-color: #4056A1;
-  width: 25%;
-  display: flex;
-  font-family: 'Bungee', cursive;
-}
 
 .container {
   display: flex;
