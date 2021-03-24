@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/articles.css" type="text/css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     
 
@@ -53,18 +54,30 @@
       <section class="new-tweet">
         <h3>Compose Tweet</h3>
         <form Content-Type="application/x-www-form-urlencoded" action="/tweets/" method="POST">
-          <!-- <label for="tweetInput">What are you humming about?</label>
-          <textarea name="text" id="tweetInput"></textarea> -->
-          <input type="text" name="tweetInput" id="tweetInput" value="Broadcast your stupid thoughts.." >
+          <label class="tweetLabel" for="tweetInput">Broadcast your stupid thoughts..</label>
+          <textarea name="tweetInput" id="tweetInput" cols="30" rows="2"></textarea>
           <div class="belowTweet">
             <button type="submit" id="tweetButton">TWEET!</button>
-            <div class="d-flex">
+            <div class="bottomContainer">
               <p class="errorMsg">Character Limit Exceeded!</p>
               <output name="counter" class="counter" for="tweet-text"><span id="countNumber">0</span>/140</output>
               <br clear="both">
             </div>
           </div>
         </form>
+      </section>
+      <section class="oldPostsContainer">
+        <div class="singlePostContainer">
+          <article class="tweet">
+            <header>
+              <h4>SMILEY NAME NAME</h4><h4 class="username">USERNAME</h4>  
+            </header>
+            <p>This is our sample tweetski!</p>
+            <footer>
+              <h6>Date Posted</h6><h6>☟ ♺ ♥</h6>
+            </footer>
+          </article>
+        </div>
       </section>
     </main>
   </body>

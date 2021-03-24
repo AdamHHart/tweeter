@@ -19,6 +19,8 @@
 
 // });
 
+
+
 $(function() {
   $("#tweetInput").keyup(function(event) {
     $("#countNumber").text($(this).val().length);
@@ -30,7 +32,9 @@ $(function() {
     } else {
       $(".errorMsg").hide();
       $(this).css("border", "");
-      $("#countNumber").css("color", "#FFFFFF");
+      $("#countNumber").css("color", "#545149");
     }
   })
 })
+
+

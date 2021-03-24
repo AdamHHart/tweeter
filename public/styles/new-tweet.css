@@ -7,24 +7,40 @@ main {
   align-items: center;
   justify-content: flex-start;
 }
+h3 {
+  color: #545149;
+}
 
 .belowTweet {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+.tweetLabel {
+  font-size: smaller;
+  color: #545149;
+}
 #tweetInput {
-  background-color: #d8b680;
-  border-bottom: black solid 5px;
+  background-color: #e6cca3;
   width: 90%;
   font-size: 20px;
   border: none;
+  border-bottom: black solid 2px;
 }
 #tweetButton {
   background-color: #4056A1;
   width: 25%;
-  display: flex;
+  /* display: flex;
+  align-self: flex-end; */
   font-family: 'Bungee', cursive;
+}
+
+.bottomContainer {
+  display: flex;
+  flex-direction: row;
+  align-content: space-around;
+  padding-top: 5px;
+  
 }
 
 .errorMsg {
@@ -37,10 +53,12 @@ main {
 .counter {
   float: right;
   font-family: 'Bungee', cursive;
+  color: #545149;
 }
 
 #countNumber {
   float: right;
   font-family: 'Bungee', cursive;
+  color: #545149;
 }
 

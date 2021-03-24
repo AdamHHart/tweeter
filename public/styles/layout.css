@@ -4,9 +4,9 @@
  * Do not modify these two selectors, please
  */
 
-* {
+/* * {
   border: solid black 1px;
-}
+} */
 
 html {
   box-sizing: border-box;
@@ -39,7 +39,7 @@ main {
 
 body {
   color: #545149;
-  background-color: #d8b680;
+  background-color: #e6cca3;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
   display: flex;
