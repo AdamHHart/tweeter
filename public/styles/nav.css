@@ -49,10 +49,13 @@ html {
   align-content: space-around; */
 }
 
-nav {
+nav.navbar {
   width: 100%; 
   height: 70px;
   background-color: #4056A1;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .barContainer {
@@ -76,6 +79,11 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  margin-top: 70px;
+}
+.header h2 {
+  padding: 0;
+  margin: 0;
 }
 .avatar {
   display: flex;
@@ -85,7 +93,7 @@ nav {
 
 .userName {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-content: center;
 }
 
