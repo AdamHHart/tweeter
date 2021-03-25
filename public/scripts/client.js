@@ -46,6 +46,12 @@ const data = [
 
 $(document).ready(function () {
 
+  const escape =  function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+
   // takes tweet object and places values data into appropriate html structure.
   const createTweetElement = function(tweetObject) {
     const $articleTweet = $("<section></section>").addClass("oldPostsContainer")
@@ -56,7 +62,7 @@ $(document).ready(function () {
                       `<img src="${tweetObject.user.avatars}">` +
                       `<h4 class="name">${tweetObject.user.name}</h4><h4 class="username">${tweetObject.user.handle}</h4>` +
                     `</header>` +
-                    `<p class="tweet">${tweetObject.content.text}</p>` +
+                    `<p class="tweet">${escape(tweetObject.content.text)}</p>` +
                     `<footer>` +
                       `<h6 class="date">${tweetObject.created_at}</h6><h6 class="smButtons">☟ ♺ ♥</h6>` +
                     `</footer>` +
@@ -91,11 +97,11 @@ $(document).ready(function () {
 
     if ($textData === null || $textData === "") {
       $errorMsg.text("Error. Your tweet is empty!").toggle(true);
-      alert("Error. Your tweet is empty!");
+     
     } 
     if ($textLength > 140) {
       $errorMsg.text("Error. Your tweet is too long!").toggle(true);
-      alert("Error. Your tweet is too long!");
+   
     }
     if (!($textData === null) && !($textLength > 140)) {
       let url = "/tweets/"
