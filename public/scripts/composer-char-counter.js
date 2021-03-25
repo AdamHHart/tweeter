@@ -37,4 +37,15 @@ $(function() {
   })
 })
 
+// $(function() {
+//   $("#tweetInput").keyup(function(event) {
+//     $("#countNumber").text($(this).val().length);
+//     let x = $(this).val().length;
+//     if (x === 0) {
+//       $(".errorMsg").show();
+//     } else {
+//       $(".errorMsg").hide();
+//     }
+//   })
+// })
 

@@ -63,7 +63,7 @@ $(document).ready(function () {
                   `</article>` 
                 
               );
-              const resultingTweet = $articleTweet.append(tweet);
+              const resultingTweet = $articleTweet.prepend(tweet);
     return resultingTweet;
   }
 
@@ -75,32 +75,53 @@ $(document).ready(function () {
     const newContainer = $(".tweet").html("");
     for (const twit of tweets) {
       tweet = createTweetElement(twit);
-      $(newContainer).append(tweet);
+      $(newContainer).prepend(tweet);
     }
   }
   
   $(".postNewTweet").on("submit", function(event) {
     event.preventDefault();
 
-    let url = "/tweets/"
-    const data = $(this).serialize();
-    console.log("data = ", data);
+    //defining textarea and error message from tweet form
+    $textInput = $(this).closest("form").find("#tweetInput");
+    $errorMsg = $(this).closest("form").find(".errorMsg");
 
-    $.ajax({
-      url: url,
-      method: "POST",
-      data: data,
-    }).done(function(response) {
-      console.log("Loading your tweets.")
-      loadTweets();
-    })
-    // }).then((result) => {
-    //   console.log("ajax callback called");
-    //   renderTweets(result);
-    // }).catch(err => {
-    //   console.log("ajax error");
-    //   console.log(err);
-    // });
+    $textData = $textInput.val().trim();
+    $textLength = $textData.length;
+
+    if ($textData === null || $textData === "") {
+      $errorMsg.text("Error. Your tweet is empty!").toggle(true);
+      alert("Error. Your tweet is empty!");
+    } 
+    if ($textLength > 140) {
+      $errorMsg.text("Error. Your tweet is too long!").toggle(true);
+      alert("Error. Your tweet is too long!");
+    }
+    if (!($textData === null) && !($textLength > 140)) {
+      let url = "/tweets/"
+      const data = $(this).serialize();
+      console.log("data = ", data);
+  
+      $.ajax({
+        url: url,
+        method: "POST",
+        data: data,
+      // }).done(function(response) {
+      //   console.log("Loading your tweets.")
+      //   loadTweets();
+      // })
+      }).then((result) => {
+        console.log("ajax callback called");
+        loadTweets();
+        $('#tweetInput').val('');
+        // $('#tweetInput').siblings(".button-and-counter").find(".counter").html('0');
+        $("#countNumber").text("0");
+      }).catch(err => {
+        console.log("ajax error");
+        console.log(err);
+      });
+
+    }
   })
 
     const loadTweets = function() {
@@ -109,11 +130,15 @@ $(document).ready(function () {
         type: "GET",
         url: "/tweets/",
         dataType: "JSON"
+      }).then((result) => {
+        console.log("ajax GET callback called");
+        console.log("result = ", result);
+        renderTweets(result); 
       })
-      .done(function(tweets) {
-        console.log("", data);
-        renderTweets(data);
-      });
+      // .done(function(tweets) {
+      //   console.log("SUCCESS!", data);
+      //   renderTweets(data);
+      // });
   };
   loadTweets();
   // renderTweets(data);
