@@ -6,17 +6,17 @@
 
 
 
-const tweetData = {
-  "user": {
-    "name": "Newton",
-    "avatars": "https://i.imgur.com/73hZDYK.png",
-    "handle": "@SirIsaac"
-    },
-  "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-  "created_at": 1461116232227
-}
+// const data = {
+//   "user": {
+//     "name": "Newton",
+//     "avatars": "https://i.imgur.com/73hZDYK.png",
+//     "handle": "@SirIsaac"
+//     },
+//   "content": {
+//       "text": "If I have seen further it is by standing on the shoulders of giants"
+//     },
+//   "created_at": 1461116232227
+// }
 
 const data = [
   {
@@ -50,18 +50,18 @@ $(document).ready(function () {
   const createTweetElement = function(tweetObject) {
     const $articleTweet = $("<section></section>").addClass("oldPostsContainer")
     const tweet = (
-                `<div class="singlePostContainer">` +
+                
                   `<article class="tweet">` +
                     `<header>` +
-                      `<img src="${tweetData.user.avatars}">` +
-                      `<h4 class="name">${tweetData.user.name}</h4><h4 class="username">${tweetData.user.handle}</h4>` +
+                      `<img src="${tweetObject.user.avatars}">` +
+                      `<h4 class="name">${tweetObject.user.name}</h4><h4 class="username">${tweetObject.user.handle}</h4>` +
                     `</header>` +
-                    `<p class="tweet">${tweetData.content.text}</p>` +
+                    `<p class="tweet">${tweetObject.content.text}</p>` +
                     `<footer>` +
-                      `<h6 class="date">${tweetData.created_at}</h6><h6 class="smButtons">☟ ♺ ♥</h6>` +
+                      `<h6 class="date">${tweetObject.created_at}</h6><h6 class="smButtons">☟ ♺ ♥</h6>` +
                     `</footer>` +
-                  `</article>` +
-                `</div>`
+                  `</article>` 
+                
               );
               const resultingTweet = $articleTweet.append(tweet);
     return resultingTweet;
@@ -69,19 +69,40 @@ $(document).ready(function () {
 
   
 
-
   const renderTweets = function(tweets) {
 
     // Loops through tweets data and calls createTweetElement function for each tweet
     const newContainer = $(".tweet").html("");
-    for (let twit in tweets) {
-      tweet = createTweetElement(tweets[twit]);
+    for (const twit of tweets) {
+      tweet = createTweetElement(twit);
       $(newContainer).append(tweet);
     }
   }
   
-  
-  // const tweetElement = createTweetElement(tweetData);
+  $(".postNewTweet").on("submit", function(event) {
+    event.preventDefault();
+
+    let url = "/tweets/"
+    const data = $(this).serialize();
+    console.log("data = ", data);
+
+    $.ajax({
+      url: url,
+      method: "POST",
+      data: data,
+    }).then((result) => {
+      console.log("ajax callback called");
+      renderTweets(result);
+    }).catch(err => {
+      console.log("ajax error");
+      console.log(err);
+    });
+  });
+
+
+
+  renderTweets(data);
+  // const tweetElement = createTweetElement(data);
   
   // Test / driver code (temporary)
   // console.log($tweetElement); // to see what it looks like
@@ -90,7 +111,7 @@ $(document).ready(function () {
 
 
   // renderTweets(data);
-  renderTweets(data);
+  
   
   
 });

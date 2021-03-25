@@ -53,9 +53,9 @@
     <main class="container">
       <section class="new-tweet">
         <h3>Compose Tweet</h3>
-        <form Content-Type="application/x-www-form-urlencoded" action="/tweets/" method="POST">
+        <form class="postNewTweet" Content-Type="application/x-www-form-urlencoded" action="/tweets/" method="POST">
           <label class="tweetLabel" for="tweetInput">Broadcast your stupid thoughts..</label>
-          <textarea name="tweetInput" id="tweetInput" cols="30" rows="2"></textarea>
+          <textarea name="text" id="tweetInput" cols="30" rows="2"></textarea>
           <div class="belowTweet">
             <button type="submit" id="tweetButton">TWEET!</button>
             <div class="bottomContainer">
@@ -67,7 +67,7 @@
         </form>
       </section>
       <section class="oldPostsContainer">
-        <div class="singlePostContainer">
+
           <article class="tweet">
             <!-- <header>
               <h4 class="name">SMILEY NAME NAME</h4><h4 class="username">USERNAME</h4>  
@@ -77,7 +77,7 @@
               <h6 class="date">Date Posted</h6><h6 class="smButtons">☟ ♺ ♥</h6>
             </footer> -->
           </article>
-        </div>
+
       </section>
     </main>
   </body>
