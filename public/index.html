@@ -10,7 +10,7 @@
 
     <!-- imported fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -19,67 +19,69 @@
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/articles.css" type="text/css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    
-
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
     <script type="text/javascript" src="/scripts/client.js"></script>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
   </head>
 
   <body class="body">
     <!-- Top nav bar (fixed) -->
-    <nav class="navbar">
-      <div class="barContainer">
-        <div class="innerContainer">
-          <span id="logo">tweeter</span>
-          <span id="newTweet">Write a new tweet!</span>
-        </div>
-      </div>
-    </nav>
-    <header class="header">
-        <div class="avatar">
-            <img src="/images/profile-hex.png"> 
-        </div>
-        <br>
-        <div class="userName">
-            <h2>Your Name</h2>
-        </div>
-    </header>
-
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <h3>Compose Tweet</h3>
-        <form class="postNewTweet" Content-Type="application/x-www-form-urlencoded" action="/tweets/" method="POST">
-          <label class="tweetLabel" for="tweetInput">Broadcast your stupid thoughts..</label>
-          <textarea name="text" id="tweetInput" cols="30" rows="2"></textarea>
-          <div class="belowTweet">
-            <button type="submit" id="tweetButton">TWEET!</button>
-            <div class="bottomContainer">
-              <p class="errorMsg">Character Limit Exceeded!</p>
-              <!-- <p class="errorMsg2">Tweet field cannot be empty!</p> -->
-              <output name="counter" class="counter" for="tweet-text"><span id="countNumber">0</span>/140</output>
-              <br clear="both">
-            </div>
+    <div class="bodyContainer">
+      <nav class="navbar">
+        <div class="barContainer">
+          <div class="innerContainer">
+            <span id="logo">tweeter</span>
+            <span id="newTweet">Write a new tweet!</span>
           </div>
-        </form>
-      </section>
-      <section class="oldPostsContainer">
-
-          <article class="tweet">
-            <!-- <header>
-              <h4 class="name">SMILEY NAME NAME</h4><h4 class="username">USERNAME</h4>  
-            </header>
-            <p class="tweet">This is our sample tweetski!</p>
-            <footer>
-              <h6 class="date">Date Posted</h6><h6 class="smButtons">☟ ♺ ♥</h6>
-            </footer> -->
-          </article>
-
-      </section>
-    </main>
+        </div>
+      </nav>
+      <div class="headerContainer">
+        <header class="header" id="header">
+            <div class="avatar">
+                <img src="/images/profile-hex.png"> 
+            </div>
+            <br>
+            <div class="userName">
+                <h2>Your Name</h2>
+            </div>
+        </header>
+      </div>
+  
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet">
+          <form class="postNewTweet" Content-Type="application/x-www-form-urlencoded" action="/tweets/" method="POST">
+            <label class="tweetLabel" for="tweetInput">Broadcast your stupid thoughts..</label>
+            <textarea name="text" id="tweetInput" cols="30" rows="2"></textarea>
+            <div class="belowTweet">
+              <button type="submit" id="tweetButton">TWEET!</button>
+              <div class="bottomContainer">
+                <p class="errorMsg">Character Limit Exceeded!</p>
+                <!-- <p class="errorMsg2">Tweet field cannot be empty!</p> -->
+                <output name="counter" class="counter" for="tweet-text"><span id="countNumber">0</span>/140</output>
+                <br clear="both">
+              </div>
+            </div>
+          </form>
+        </section>
+        <section class="oldPostsContainer">
+  
+            <article class="tweet">
+              <!-- <header>
+                <h4 class="name">SMILEY NAME NAME</h4><h4 class="username">USERNAME</h4>  
+              </header>
+              <p class="tweet">This is our sample tweetski!</p>
+              <footer>
+                <h6 class="date">Date Posted</h6><h6 class="smButtons">☟ ♺ ♥</h6>
+              </footer> -->
+            </article>
+  
+        </section>
+      </main>
+    </div>
   </body>
 </html>

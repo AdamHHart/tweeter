@@ -1,4 +1,6 @@
-.header {
+
+
+header.header  {
   font-family: 'Source Sans Pro', sans-serif;
   background-color: #db0700;
   background-image: url("https://www.transparenttextures.com/patterns/light-honeycomb-dark.png");
@@ -6,10 +8,10 @@
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  height: 400px;
+  padding: 1.5em;
   width: 100%;
-
 }
+
 .avatar {
   display: flex;
   justify-content: center;
