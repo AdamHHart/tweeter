@@ -1,13 +1,3 @@
-/*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
-
-/* * {
-  border: solid black 1px;
-} */
-
 :root {
   --header-height: 2em;
   --tweets-height: 5em;
@@ -26,12 +16,13 @@ main {
   justify-content: center;
 }
 
-
-.container {
+main.container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 1em;
 }
+
 .counter {
   display: flex;
   align-self: flex-end;
@@ -42,28 +33,28 @@ body {
   background-color: #e6cca3;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
-
 }
 
 #logo {
   font-family: 'Bungee', cursive;
   margin-left: 0.75em;
 }
-.new-tweet {
+
+new-tweet {
   margin-right: 0.75em;
   width: 90%;
 }
+
 #tweet {
   margin-right: 0.75em;
   width: 90%;
 }
 
-
 .navbar + .headerContainer {
   margin-top: var(--header-height);
 }
 
-
+/* only for Desktop screens */
 @media only screen and (min-width: 1024px) {
   .navbar {
     width: 100%;
@@ -87,7 +78,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-content: flex-start;
-  
   }
 
   .header {
@@ -104,21 +94,21 @@ body {
     justify-content: flex-end;
     padding: 1em;
   }
-
-  /* .tagline {
-    display: inline;
-    font-style: italic;
-    font-weight: normal;
-    font-size: 12px;
-  } */
-
 }
 
+/* Only for small phone screens */
 @media only screen and (max-width: 550px) {
 
   body.body {
-    font-size: 85%;
+    font-size: 90%;
   }
-
-
+  span#logo {
+    font-size: x-large;
+  }
+  #newTweet {
+    font-size: larger;
+  }
+  #tweetButton {
+    font-size: smaller;
+  }
 }

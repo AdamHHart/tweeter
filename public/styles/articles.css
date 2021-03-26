@@ -4,9 +4,7 @@
   size: 0.5em;
   padding: 10px;
   margin-top: 40px;
-  
   border: #545149 solid 2px;
-
 }
 
 .singlePostContainer {
@@ -28,20 +26,12 @@ article.tweet header {
 
 }
 
-/* article.tweet header h4.username::before{
-  display: none;
-}
-article.tweet header h4.username:hover{
-  display: "USERNAME";
-} */
-
 article.tweet footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   border-top: #545149 solid 2px;
   height: 20%;
-
 }
 
 article.tweet header h4 {
@@ -50,8 +40,8 @@ article.tweet header h4 {
   padding: 0;
   margin: 0;
 }
-article.tweet header h4.username {
 
+article.tweet header h4.username {
   padding: 0;
 }
 
@@ -59,24 +49,29 @@ article.tweet p {
   color: #545149;
   height: 50%;
 }
+
 article.tweet footer h6 {
   color: #545149;
   padding: 0;
   margin: 3px;
 }
 
-
-
-
+/* HOVER ANIMATION */
 .oldPostsContainer:hover {
   border: solid #545149 3px;
   background-color: #e9c995;
 }
 
-
 article.tweet .username { 
   display: none; 
 }
 article.tweet:hover .username { 
+  display: inline; 
+}
+
+article.tweet .smButtons { 
+  display: none; 
+}
+article.tweet:hover .smButtons { 
   display: inline; 
 }

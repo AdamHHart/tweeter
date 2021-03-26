@@ -26,7 +26,6 @@ header.header  {
 
 @media only screen and (min-width: 1024px) {
 
-
   .headerContainer .header {
     display: flex;
     flex-direction: column;
@@ -43,8 +42,6 @@ header.header  {
     /* position: fixed;
     top: 0; */
   }
-
-
 }
 
 

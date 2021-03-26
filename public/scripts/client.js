@@ -51,7 +51,13 @@ $(document).ready(function () {
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   }
+  function myFunction() {
+    let d = new Date();
+    let n = d.toLocaleString();
+    return (n);
+  }
 
+  const newDate = myFunction();
   // takes tweet object and places values data into appropriate html structure.
   const createTweetElement = function(tweetObject) {
     const $articleTweet = $("<section></section>").addClass("oldPostsContainer")
@@ -64,7 +70,7 @@ $(document).ready(function () {
                     `</header>` +
                     `<p class="tweet">${escape(tweetObject.content.text)}</p>` +
                     `<footer>` +
-                      `<h6 class="date">${tweetObject.created_at}</h6><h6 class="smButtons">☟ ♺ ♥</h6>` +
+                      `<h6 class="date">${newDate}</h6><h6 class="smButtons">☟ ♺ ♥</h6>` +
                     `</footer>` +
                   `</article>` 
                 
@@ -79,6 +85,8 @@ $(document).ready(function () {
 
     // Loops through tweets data and calls createTweetElement function for each tweet
     const newContainer = $(".tweet").html("");
+    // const newTime = $(this).find(".date").html("");  
+          // An attempt at adding live dates to all posted tweets.
     for (const twit of tweets) {
       tweet = createTweetElement(twit);
       $(newContainer).prepend(tweet);

@@ -1,26 +1,4 @@
-
-
-// $(document).ready(function() {
-//   // --- our code goes here ---
-//   console.log("Document is loaded and ready.");
-//   document.getElementById('textInput').keyup = function() {
-//     document.getElementsByClassName('counter').innerHTML = (140 - this.value.length);
-//     console.log(document.getElementsByClassName('counter'));
-//   };
-
-// });
-
-// $(document).ready(function() {
-//   // --- our code goes here ---
-//   console.log("Document is loaded and ready.");
-//   $("#tweetInput").input(function() {
-//     $(".counter").text(140 - $(this).val().length)
-//   })
-
-// });
-
-
-
+// Counter and error message functionality, counting characters using .keyup, and applying error messages when > 140 chars
 $(function() {
   $("#tweetInput").keyup(function(event) {
     $("#countNumber").text($(this).val().length);
@@ -36,16 +14,3 @@ $(function() {
     }
   })
 })
-
-// $(function() {
-//   $("#tweetInput").keyup(function(event) {
-//     $("#countNumber").text($(this).val().length);
-//     let x = $(this).val().length;
-//     if (x === 0) {
-//       $(".errorMsg").show();
-//     } else {
-//       $(".errorMsg").hide();
-//     }
-//   })
-// })
-

@@ -7,6 +7,7 @@ main {
   align-items: center;
   justify-content: flex-start;
 }
+
 h3 {
   color: #545149;
 }
@@ -16,10 +17,12 @@ h3 {
   flex-direction: row;
   justify-content: space-between;
 }
+
 .tweetLabel {
   font-size: smaller;
   color: #545149;
 }
+
 #tweetInput {
   background-color: #e6cca3;
   width: 90%;
@@ -27,6 +30,7 @@ h3 {
   border: none;
   border-bottom: black solid 2px;
 }
+
 #tweetButton {
   background-color: #4056A1;
   width: 25%;
@@ -50,6 +54,7 @@ h3 {
   font-size: small;
   font-family: 'Source Code Pro', monospace;
 }
+
 .counter {
   float: right;
   font-family: 'Bungee', cursive;

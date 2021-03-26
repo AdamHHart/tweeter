@@ -1,12 +1,3 @@
-/* Change the appearance of the nav based on the following rules. The navbar should:
-
-Be 120 pixels in height
-Be the full width of the viewport.
-Have #4056A1 as its default background colour.
-Have #FFFFFF as its default font colour
-The <span> within the <nav> has Bungee as it's default font-family
-The inner content should not be touching the viewport edge on any side and should remain 1.5ems away from all edges */
-
 html {
   box-sizing: border-box;
 }
@@ -16,10 +7,6 @@ html {
   color: #FFFFFF;
 }
 
-/*
- * Global layout stuff
- */
-
 .body {
   color: #545149;
   background-color: #e6cca3;
@@ -27,27 +14,19 @@ html {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-
 .container {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
 #logo {
   font-family: 'Bungee', cursive;
-  /* display: flex; */
-  /* justify-content: flex-start;
-  align-content: space-around; */
 }
 
 #newTweet {
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 24px;
   font-weight: 600;
   padding-top: 10px;
   margin-right: 0.75em;
-  /* display: flex; */
-  /* justify-content: flex-end;
-  align-content: space-around; */
 }
 
 nav.navbar {
@@ -61,10 +40,6 @@ nav.navbar {
 
 .barContainer {
   padding-top: 20px;
-  /* display: flex;
-  flex-flow: row;
-  justify-content: space-between;
-  align-content: center; */
 }
 
 .innerContainer {
@@ -82,10 +57,12 @@ nav.navbar {
   align-content: center;
   margin-top: 70px;
 }
+
 .header h2 {
   padding: 0;
   margin: 0;
 }
+
 .avatar {
   display: flex;
   justify-content: center;
@@ -97,7 +74,3 @@ nav.navbar {
   justify-content: flex-start;
   align-content: center;
 }
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
