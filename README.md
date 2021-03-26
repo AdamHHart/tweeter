@@ -18,3 +18,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Bugs
 If you find bugz, email adamhayhart@gmail.com with the subject "Tweeter BUGS". Enjoy!
+
+!["Desktop with error"](https://github.com/AdamHHart/tweeter/blob/master/docs/desktop_tweeter_with_error.jpg?raw=true)
+
+!["Smartphone sizing"](https://github.com/AdamHHart/tweeter/blob/master/docs/smartphone_tweeter.jpg?raw=true)
+
+!["Tablet sizing"](https://github.com/AdamHHart/tweeter/blob/master/docs/tweeter_tab.jpg?raw=true)
