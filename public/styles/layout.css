@@ -10,7 +10,7 @@
 
 :root {
   --header-height: 2em;
-
+  --tweets-height: 5em;
 }
 
 html {
@@ -22,25 +22,20 @@ html {
 }
 
 main {
-  width: 90%;
+  width: 100%;
+  justify-content: center;
 }
 
 
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
 }
 .counter {
   display: flex;
   align-self: flex-end;
 }
-
-
-
-/*
- * Global layout stuff
- */
 
 body {
   color: #545149;
@@ -54,14 +49,19 @@ body {
   font-family: 'Bungee', cursive;
   margin-left: 0.75em;
 }
-#newTweet {
+.new-tweet {
   margin-right: 0.75em;
+  width: 90%;
 }
+#tweet {
+  margin-right: 0.75em;
+  width: 90%;
+}
+
 
 .navbar + .headerContainer {
   margin-top: var(--header-height);
 }
-
 
 
 @media only screen and (min-width: 1024px) {
@@ -70,9 +70,10 @@ body {
     height: left;
   }
 
-.bodyContainer {
-  display: flex;
-}
+  .bodyContainer {
+    display: flex;
+    flex: 1;
+  }
 
   .body {
     display: flex;
@@ -86,17 +87,22 @@ body {
     flex-direction: column;
     justify-content: center;
     align-content: flex-start;
+  
   }
 
-  header.header {
+  .header {
     display: flex;
     align-self: flex-start;
+    width: 30em;
+    /* position: fixed;
+    top: 0; */
   }
 
   main.container { 
-    margin-top: var(--header-height);
+    margin-top: var(--tweets-height);
     display: flex;
     justify-content: flex-end;
+    padding: 1em;
   }
 
   /* .tagline {
@@ -108,3 +114,11 @@ body {
 
 }
 
+@media only screen and (max-width: 550px) {
+
+  body.body {
+    font-size: 85%;
+  }
+
+
+}

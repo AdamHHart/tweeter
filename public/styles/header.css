@@ -23,3 +23,30 @@ header.header  {
   justify-content: center;
   align-content: center;
 }
+
+@media only screen and (min-width: 1024px) {
+
+
+  .headerContainer .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: flex-start;
+  
+  }
+
+  .header {
+    display: flex;
+    align-self: flex-start;
+    
+    width: 30em;
+    /* position: fixed;
+    top: 0; */
+  }
+
+
+}
+
+
+
+
