@@ -75,3 +75,7 @@ article.tweet .smButtons {
 article.tweet:hover .smButtons { 
   display: inline; 
 }
+
+#tweetInput {
+  color: #545149;
+}
