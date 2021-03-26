@@ -15,3 +15,6 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Bugs
+If you find bugz, email adamhayhart@gmail.com with the subject "Tweeter BUGS". Enjoy!
